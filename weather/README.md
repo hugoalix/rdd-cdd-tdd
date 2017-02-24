@@ -12,4 +12,4 @@ To use it, write on the console line,"node cli" and then add your city and your 
 For exemple, write "node cli Paris France" to have the weather of Paris. 
 
 #What you should have?
-![(C:/Users/hugoalix/rdd-cdd-tdd/weather/Capture.png)]
+![(C:\Users\hugoalix\rdd-cdd-tdd\weather\Capture.PNG)]
