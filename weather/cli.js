@@ -32,7 +32,8 @@ function _toCelcius(temp) {
 updateNotifier({ pkg}).notify();
 
 weather(cli.input, (err, result) => {
-	if (err) {
+	if (err) //if there are error, you go out
+	{
 		console.log(chalk.bold.red(err));
 		process.exit(1);
 	}
@@ -48,11 +49,11 @@ weather(cli.input, (err, result) => {
 		temperature = _toCelcius(result.query.results.channel.item.condition.temp) + 'C';
 	}
 
-	let city = cli.input[0] ? cli.input[0] : 'Dhaka';
-	let country = cli.input[1] ? cli.input[1] : 'Bangladesh';
+	let city = cli.input[0] ? cli.input[0] : 'Dhaka'; //take the city which has been enter, if there are not, it take default value 
+	let country = cli.input[1] ? cli.input[1] : 'Bangladesh'; //take the city which has been enter, if there are not, it take default value 
 
 	console.log(chalk.red(city + ', ' + country));
 	console.log(chalk.cyan('Condition: ' + chalk.yellow(condition)));
-	console.log(chalk.cyan('Temperature: ' + chalk.yellow(temperature)));
+	console.log(chalk.cyan('Temperature: ' + chalk.yellow(temperature)));//print the different value
 	process.exit();
 });
